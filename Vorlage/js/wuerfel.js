@@ -20,21 +20,20 @@ function rollDice2() {
 	//damit während der "Animation" keine klicks die Funktion stören, wird der Eventlistener anfangs entfernt und zum Schluss wieder hinzugefügt.
 	document.getElementById('rollButton').removeEventListener('click', rollDice2);
 	
-	var x=0;
-
-	var animDice = function myFunction(){
-		// bei jedem Ausführen soll die Variable x um 1 erhöht werden.
-		/* ... hier kommt dein Code */
-
-		// bei jedem Ausführen soll eine Zufallszahl in das DIV mit der ID 'dice' geschrieben werden.
-		/* ... hier kommt dein Code */
-
-		if(x==10){
-			clearInterval(timer);
-			document.getElementById('rollButton').addEventListener('touchstart', rollDice2);
-		}
-	}
-	timer = setInterval(repeatedFunction, 5000);/* ... hier kommt dein Code */
+	<script>
+      function myFunction() {
+        var x = 0;
+        var repeatedFunction = function () {
+          x++;
+          alert(x);
+          if (x == 10) {
+            clearInterval(timer);
+            alert('1000ms=1s');
+          }
+        }
+        timer = setInterval(repeatedFunction, 1000);
+      }
+    </script>
 }
 
 

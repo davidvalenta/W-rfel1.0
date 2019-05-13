@@ -35,7 +35,7 @@ function rollDice2() {
 			document.getElementById('rollButton').addEventListener('touchstart', rollDice2);
 		}
 	}
-	timer = setInterval(repeatedFunction, 1000);/* ... hier kommt dein Code */
+	timer = setInterval(repeatedFunction, 5000);/* ... hier kommt dein Code */
 }
 
 

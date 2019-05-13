@@ -31,7 +31,6 @@ function rollDice2() {
 
 		if(x==10){
 			clearInterval(timer);
-			document.getElementById('rollButton').addEventListener('click', rollDice2);
 			document.getElementById('rollButton').addEventListener('touchstart', rollDice2);
 		}
 	}

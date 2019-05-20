@@ -3,8 +3,8 @@ function init() {
 	//wenn auf das DIV mit der ID 'rollButton' geklickt wird, soll die Funktion 'rollDice1' ausgeführt werden
 	/* ... hier kommt dein Code */
 	
-	document.getElementById('rollButton').addEventListener('click', rollDice1);
-	document.getElementById('rollButton').addEventListener('touchstart', rollDice1);
+	document.getElementById('rollButton').addEventListener('click', rollDice2);
+	document.getElementById('rollButton').addEventListener('touchstart', rollDice2);
 }
 
 //Einfache Würfelfunktion
@@ -25,19 +25,20 @@ function rollDice2() {
 	var animDice = function myFunction(){
 		// bei jedem Ausführen soll die Variable x um 1 erhöht werden.
 		/* ... hier kommt dein Code */
-		x++;
-		alert(x);
-		alert('1000ms=1s');
+		
 		// bei jedem Ausführen soll eine Zufallszahl in das DIV mit der ID 'dice' geschrieben werden.
 		/* ... hier kommt dein Code */
         document.getElementById('dice').innerHTML =  Math.ceil(Math.random()*6);
+		
+		x++;
+		
 		if(x==10){
 			clearInterval(timer);
 			document.getElementById('rollButton').addEventListener('click', rollDice2);
 			document.getElementById('rollButton').addEventListener('touchstart', rollDice2);
 		}
 	}
-	timer = setInterval(repeatedFunction, 1000);/* ... hier kommt dein Code */
+	timer = setInterval(animDice, 50);/* ... hier kommt dein Code */
 }
 
 

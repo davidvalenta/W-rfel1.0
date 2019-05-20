@@ -25,10 +25,12 @@ function rollDice2() {
 	var animDice = function myFunction(){
 		// bei jedem Ausführen soll die Variable x um 1 erhöht werden.
 		/* ... hier kommt dein Code */
-
+		x++;
+		alert(x);
+		alert('1000ms=1s');
 		// bei jedem Ausführen soll eine Zufallszahl in das DIV mit der ID 'dice' geschrieben werden.
 		/* ... hier kommt dein Code */
-
+        document.getElementById('dice').innerHTML =  Math.ceil(Math.random()*6);
 		if(x==10){
 			clearInterval(timer);
 			document.getElementById('rollButton').addEventListener('click', rollDice2);
